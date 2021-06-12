@@ -1,3 +1,4 @@
+import { NgZorroModule } from './../ngZorro/ng-zorro.module';
 import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -19,6 +20,6 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
     SidebarComponent,
     BreadcrumbsComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, NgZorroModule],
 })
 export class SharedModule {}

@@ -1,3 +1,4 @@
+import { NgZorroModule } from './../ngZorro/ng-zorro.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -10,6 +11,6 @@ import { PagesComponent } from './pages.component';
   declarations: [DashboardComponent, PagesComponent],
   exports: [DashboardComponent, PagesComponent],
 
-  imports: [CommonModule, SharedModule, RouterModule],
+  imports: [CommonModule, SharedModule, RouterModule, NgZorroModule],
 })
 export class PagesModule {}
