@@ -1,3 +1,4 @@
+import { SharedService } from './../../services/shared.service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -7,8 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
   // @Input('isCollapsed')
-  isCollapsed = false;
-  constructor() {}
+  isCollapsed: boolean;
+  constructor(public sharedService: SharedService) {}
 
   ngOnInit(): void {}
+  ocultarMenu() {
+    this.isCollapsed = this.sharedService.isCollapsed;
+  }
 }

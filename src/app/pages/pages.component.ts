@@ -1,3 +1,4 @@
+import { SharedService } from './../services/shared.service';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./pages.component.css'],
 })
 export class PagesComponent implements OnInit {
-  @Input('valor') isCollapsed = false;
-  constructor() {}
+  // @Input('valor') isCollapsed = false;
+  isCollapsed = false;
+  constructor(public sharedService: SharedService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.sharedService.isCollapsed = this.isCollapsed;
+  }
 }
